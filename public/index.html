@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampüs Etkinlik Panosu</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+    <header class="ust-bant">
+        <div class="logo">Bozok Etkinlik</div>
+        <nav class="menu">
+            <a href="#liste">Etkinlikler</a>
+            <a href="#oneri">Etkinlik Öner</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="arama-filtre" class="arama-alani">
+            <input type="text" id="arama-kutusu" placeholder="Etkinlik başlığı ara...">
+            <div class="filtre-butonlari">
+                <button class="filtre-btn secili" data-tur="tumu">Tümü</button>
+                <button class="filtre-btn" data-tur="atolye">Atölye</button>
+                <button class="filtre-btn" data-tur="soylesi">Söyleşi</button>
+                <button class="filtre-btn" data-tur="topluluk">Topluluk</button>
+            </div>
+        </section>
+
+        <section id="liste">
+            <h1>Yaklaşan Etkinlikler</h1>
+            <div id="mesaj-alani">Yükleniyor...</div>
+            <div id="kartlar-konteyner" class="kartlar-grid">
+                <!-- Kartlar JS ile buraya eklenecek -->
+            </div>
+        </section>
+
+        <section id="oneri">
+            <h2>Yeni Etkinlik Öner</h2>
+            <form id="oneri-formu">
+                <div class="form-grup">
+                    <label for="f-ad">Etkinlik Adı:</label>
+                    <input type="text" id="f-ad" name="ad">
+                </div>
+                <div class="form-grup">
+                    <label for="f-tarih">Tarih:</label>
+                    <input type="date" id="f-tarih" name="tarih">
+                </div>
+                <div class="form-grup">
+                    <label for="f-eposta">İletişim E-posta:</label>
+                    <input type="email" id="f-eposta" name="eposta">
+                </div>
+                <button type="submit">Öneriyi Gönder</button>
+                <div id="form-mesaj" class="form-mesaj"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bozok Etkinlik Panosu</p>
+    </footer>
+
+    <script src="betik.js"></script>
+</body>
+</html>
